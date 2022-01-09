@@ -18,14 +18,19 @@ const randomIntegerFromInterval = (min, max) => {
 };
 
 let interval = null;
+// let isActive = false;
 
 function changeColor() {
-  const color = randomIntegerFromInterval(0, colors.length);
+  const color = randomIntegerFromInterval(0, colors.length - 1);
   refs.body.style.backgroundColor = colors[color];
   console.log(`Стиль №${color}`);
 }
 
 function startChange() {
+  // it(isActive) {
+  //   return;
+  // }
+  // isActive = true;
   refs.start.disable = true;
   interval = setInterval(changeColor, 1000);
 }
