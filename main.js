@@ -18,7 +18,6 @@ const randomIntegerFromInterval = (min, max) => {
 };
 
 let interval = null;
-// let isActive = false;
 
 function changeColor() {
   const color = randomIntegerFromInterval(0, colors.length - 1);
@@ -27,11 +26,7 @@ function changeColor() {
 }
 
 function startChange() {
-  // it(isActive) {
-  //   return;
-  // }
-  // isActive = true;
-  refs.start.disable = true;
+  refs.start.disabled = true;
   interval = setInterval(changeColor, 1000);
 }
 
